@@ -24,7 +24,7 @@
       </ul>
     </div>
     <a class="btn btn-ghost normal-case text-xl">
-      <img src="../../assets/img/logo_black.png" style="height: 50px;">
+      <img src="../assets/img/logo_black.png" style="height: 50px;">
       <span>Kertas</span>
     </a>
   </div>

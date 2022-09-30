@@ -1,6 +1,6 @@
-  <footer class="footer footer-center p-10 bg-primary text-primary-content">
+<footer class="footer footer-center p-10 bg-primary text-primary-content">
     <div>
-      <img src="../../assets/img/logo_white.png" style="height: 100px;">
+      <img src="../assets/img/logo_white.png" style="height: 100px;">
       <p class="font-bold">Kertas</p> 
       <p>Copyright © 2022 - All right reserved</p>
     </div> 
