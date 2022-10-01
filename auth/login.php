@@ -1,31 +1,72 @@
+<?php
 
+session_start();
 
-  <?php  require_once('../layouts/auth/header.php') ?>
+if(isset($_SESSION['status'])) {
+  if($_SESSION['role'] = 'admin') {
+    header("Location:../dashboard/admin");
+  } else {
+    header("Location:../dashboard/user");
+  }
+}
+
+if(isset($_POST['email'])) {
+  if($_POST['email'] == 'admin@kertas.my.id' && $_POST['password'] == '123123') {
+    $_SESSION['email'] = "admin@kertas.my.id";
+    $_SESSION['role'] = 'admin';
+    $_SESSION['status'] = "login";
+    header("Location:../dashboard/admin");
+  } else if($_POST['email'] == 'user@kertas.my.id' && $_POST['password'] == '123123') {
+    $_SESSION['email'] = "user@kertas.my.id";
+    $_SESSION['role'] = 'user';
+    $_SESSION['status'] = "login";
+    header("Location:../dashboard/user");
+  } else {
+    header("Location:./login.php?denied=true");
+  }
+}
+?>
+
+<?php require_once('../layouts/auth/header.php') ?>
   <!-- MAIN -->
-  <main class="min-h-screen">
-    <div class="carousel w-full">
-      <div id="slide1" class="carousel-item relative w-full">
-        <div class="hero py-10 bg-base-200">
-          <div class="hero-content flex-col lg:flex-row">
-            <img src="https://placeimg.com/900/700/people" class="max-w-sm rounded-lg shadow-2xl hidden lg:block" />
-            <div class="lg:text-left">
-              <h1 class="text-5xl font-bold">Sebuah Arsip</h1>
-              <p class="py-6">Test</p>
-              <button class="btn btn-primary">Get Started</button>
+  <main class="min-h-screen flex items-center justify-center">
+    <div class="hero min-h-screen bg-base-200">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="text-center lg:text-left lg:pl-8">
+          <h1 class="text-5xl font-bold">Masuk</h1>
+          <p class="py-6">Pastikan dirimu bermanfaat tuk yang lainnya.</p>
+        </div>
+        <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div class="card-body">
+            <img src="../assets/img/logo_black.png" class="object-contain h-[120px]">
+            <?php if(isset($_GET['denied'])): ?>
+            <div class="alert alert-error">
+              <span>Akun tidak terdaftar!</span>
             </div>
+            <?php endif; ?>
+            <form action="" method="post">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Email</span>
+                </label>
+                <input type="email" name="email" placeholder="info@kertas.my.id" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Password</span>
+                </label>
+                <input type="password" name="password" placeholder="Rahasia" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Lupa Password?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button type="submit" class="btn btn-outline">Login</button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="absolute justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 hidden lg:flex">
-          <a href="#slide4" class="btn btn-circle">❮</a> 
-          <a href="#slide2" class="btn btn-circle">❯</a>
-        </div>
       </div>
-    </div>
-    <div class="lg:hidden flex justify-center w-full py-2 gap-2">
-      <a href="#slide1" class="btn btn-xs">1</a> 
-      <a href="#item2" class="btn btn-xs">2</a> 
-      <a href="#item3" class="btn btn-xs">3</a> 
-      <a href="#item4" class="btn btn-xs">4</a>
     </div>
   </main>
 
