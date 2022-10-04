@@ -1,6 +1,4 @@
 <?php
-include('./config.php');
-
 function query($query) {
 	global $connection;
 	$result = mysqli_query($connection, $query);

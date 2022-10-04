@@ -4,9 +4,9 @@ session_start();
 
 if(isset($_SESSION['status'])) {
   if($_SESSION['role'] = 'admin') {
-    header("Location:../dashboard/admin");
+    header("Location:../admin/dashboard");
   } else {
-    header("Location:../dashboard/user");
+    header("Location:../user/dashboard");
   }
 }
 
@@ -15,12 +15,12 @@ if(isset($_POST['email'])) {
     $_SESSION['email'] = "admin@kertas.my.id";
     $_SESSION['role'] = 'admin';
     $_SESSION['status'] = "login";
-    header("Location:../dashboard/admin");
+    header("Location:../admin/dashboard");
   } else if($_POST['email'] == 'user@kertas.my.id' && $_POST['password'] == '123123') {
     $_SESSION['email'] = "user@kertas.my.id";
     $_SESSION['role'] = 'user';
     $_SESSION['status'] = "login";
-    header("Location:../dashboard/user");
+    header("Location:../user/dashboard");
   } else {
     header("Location:./login.php?denied=true");
   }

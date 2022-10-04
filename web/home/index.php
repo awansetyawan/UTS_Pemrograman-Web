@@ -1,32 +1,161 @@
+<?php
 
+session_start();
+?>
 
-  <?php  require_once('../../layouts/web/header.php') ?>
-  <!-- MAIN -->
-  <main class="min-h-screen">
-    <div class="carousel w-full">
-      <div id="slide1" class="carousel-item relative w-full">
-        <div class="hero py-10 bg-base-200">
-          <div class="hero-content flex-col lg:flex-row">
-            <img src="https://placeimg.com/900/700/people" class="max-w-sm rounded-lg shadow-2xl hidden lg:block" />
-            <div class="lg:text-left">
-              <h1 class="text-5xl font-bold">Sebuah Arsip</h1>
-              <p class="py-6">Test</p>
-              <button class="btn btn-primary">Get Started</button>
-            </div>
+<?php  require_once('../../layouts/web/header.php') ?>
+<!-- MAIN -->
+<main class="min-h-screen">
+  <section class="hero min-h-[60vh] bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold">Berkarya, Berbagi</h1>
+        <p class="py-6">Temukan jurnal, penelitian, dan karya ilmiah berbagai subjek dari mereka yang penuh rasa penasaran.</p>
+        <div class="form-control">
+          <div class="input-group justify-center">
+            <input type="text" placeholder="Machine Learning..." class="input input-bordered" />
+            <button class="btn btn-square">
+              <div class="fa-solid fa-search"></div>
+            </button>
           </div>
-        </div>
-        <div class="absolute justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 hidden lg:flex">
-          <a href="#slide4" class="btn btn-circle">❮</a> 
-          <a href="#slide2" class="btn btn-circle">❯</a>
         </div>
       </div>
     </div>
-    <div class="lg:hidden flex justify-center w-full py-2 gap-2">
-      <a href="#slide1" class="btn btn-xs">1</a> 
-      <a href="#item2" class="btn btn-xs">2</a> 
-      <a href="#item3" class="btn btn-xs">3</a> 
-      <a href="#item4" class="btn btn-xs">4</a>
-    </div>
-  </main>
+  </section>
 
-  <?php  require_once('../../layouts/web/footer.php') ?>
+  <section id="trending" class="lg:px-48 px-8 py-8">
+    <h1 class="text-2xl text-bold mb-5">
+      <i class="fa-regular fa-star mr-3"></i>
+      <span>Paling Banyak Dicari</span>
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="card bg-base-100 shadow-md h-[130px]">
+        <div class="card-body pr-5 py-7 pl-0">
+          <div class="flex">
+            <div class="pr-4 pl-4 flex align-center">
+              <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
+            </div>
+            <div class="card-content">
+              <div class="avatar flex align-center justify-center">
+                <div class="w-5 rounded-full">
+                  <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+                </div>
+                <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
+              </div>
+              <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
+              <div class="alt-info-container"
+                <span class="text-xs">Okt 1</span>
+                <span class="ml-3 badge p-2">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-md h-[130px]">
+        <div class="card-body pr-5 py-7 pl-0">
+          <div class="flex">
+            <div class="pr-4 pl-4 flex align-center">
+              <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
+            </div>
+            <div class="card-content">
+              <div class="avatar flex align-center justify-center">
+                <div class="w-5 rounded-full">
+                  <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+                </div>
+                <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
+              </div>
+              <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
+              <div class="alt-info-container"
+                <span class="text-xs">Okt 1</span>
+                <span class="ml-3 badge p-2">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-md h-[130px]">
+        <div class="card-body pr-5 py-7 pl-0">
+          <div class="flex">
+            <div class="pr-4 pl-4 flex align-center">
+              <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
+            </div>
+            <div class="card-content">
+              <div class="avatar flex align-center justify-center">
+                <div class="w-5 rounded-full">
+                  <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+                </div>
+                <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
+              </div>
+              <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
+              <div class="alt-info-container"
+                <span class="text-xs">Okt 1</span>
+                <span class="ml-3 badge p-2">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="lg:px-48 px-8 py-8 bg-base-200">
+    <h1 class="text-2xl text-bold mb-5">
+      <i class="fa-solid fa-globe mr-3"></i>
+      <span>Berita</span>
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="col-span-2">
+        <div class="card bg-base-100 shadow-md h-[130px]">
+          <div class="card-body pr-5 py-7 pl-0">
+            <div class="flex">
+              <div class="pr-4 pl-4 flex align-center">
+                <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
+              </div>
+              <div class="card-content">
+                <div class="avatar flex align-center justify-center">
+                  <div class="w-5 rounded-full">
+                    <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+                  </div>
+                  <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
+                </div>
+                <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
+                <div class="alt-info-container"
+                  <span class="text-xs">Okt 1</span>
+                  <span class="ml-3 badge p-2">Machine Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card bg-base-100 shadow-md h-[130px]">
+          <div class="card-body pr-5 py-7 pl-0">
+            <div class="flex">
+              <div class="pr-4 pl-4 flex align-center">
+                <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
+              </div>
+              <div class="card-content">
+                <div class="avatar flex align-center justify-center">
+                  <div class="w-5 rounded-full">
+                    <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+                  </div>
+                  <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
+                </div>
+                <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
+                <div class="alt-info-container"
+                  <span class="text-xs">Okt 1</span>
+                  <span class="ml-3 badge p-2">Machine Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<?php  require_once('../../layouts/web/footer.php') ?>

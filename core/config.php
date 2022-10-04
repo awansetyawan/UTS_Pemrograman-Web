@@ -1,8 +1,4 @@
 <?php
-/**
- * using mysqli_connect for database connection
- */
-require __DIR__ . '/vendor/autoload.php';
 
 $databaseHost = 'localhost';
 $databaseName = 'digitalent_library';
