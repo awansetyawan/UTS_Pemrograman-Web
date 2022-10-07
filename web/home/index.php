@@ -1,161 +1,115 @@
 <?php
-
 session_start();
 ?>
 
 <?php  require_once('../../layouts/web/header.php') ?>
-<!-- MAIN -->
-<main class="min-h-screen">
-  <section class="hero min-h-[60vh] bg-base-200">
-    <div class="hero-content text-center">
-      <div class="max-w-md">
-        <h1 class="text-5xl font-bold">Berkarya, Berbagi</h1>
-        <p class="py-6">Temukan jurnal, penelitian, dan karya ilmiah berbagai subjek dari mereka yang penuh rasa penasaran.</p>
-        <div class="form-control">
-          <div class="input-group justify-center">
-            <input type="text" placeholder="Machine Learning..." class="input input-bordered" />
-            <button class="btn btn-square">
-              <div class="fa-solid fa-search"></div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="trending" class="lg:px-48 px-8 py-8">
-    <h1 class="text-2xl text-bold mb-5">
-      <i class="fa-regular fa-star mr-3"></i>
-      <span>Paling Banyak Dicari</span>
-    </h1>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="card bg-base-100 shadow-md h-[130px]">
-        <div class="card-body pr-5 py-7 pl-0">
-          <div class="flex">
-            <div class="pr-4 pl-4 flex align-center">
-              <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
-            </div>
-            <div class="card-content">
-              <div class="avatar flex align-center justify-center">
-                <div class="w-5 rounded-full">
-                  <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
-                </div>
-                <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
-              </div>
-              <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
-              <div class="alt-info-container"
-                <span class="text-xs">Okt 1</span>
-                <span class="ml-3 badge p-2">Machine Learning</span>
-              </div>
-            </div>
-          </div>
+    <!-- Top Recipe Section Begin -->
+    <section class="top-recipe spad" style="margin-top: 100px;">
+        <div class="section-title">
+            <h5>Layanan Kami</h5>
         </div>
-      </div>
-      <div class="card bg-base-100 shadow-md h-[130px]">
-        <div class="card-body pr-5 py-7 pl-0">
-          <div class="flex">
-            <div class="pr-4 pl-4 flex align-center">
-              <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
+        <div class="container po-relative">
+            <div class="plus-icon">
+                <i class="fa fa-question"></i>
             </div>
-            <div class="card-content">
-              <div class="avatar flex align-center justify-center">
-                <div class="w-5 rounded-full">
-                  <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="top-recipe-item large-item">
+                        <div class="top-recipe-img set-bg" data-setbg="../../assets/img/picture-6.jpg">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="top-recipe-text">
+                            <div class="cat-name">Ahli</div>
+                            <a href="#">
+                                <h4>Kami telah lama di bidang ini</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
-              </div>
-              <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
-              <div class="alt-info-container"
-                <span class="text-xs">Okt 1</span>
-                <span class="ml-3 badge p-2">Machine Learning</span>
-              </div>
+                <div class="col-lg-6">
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="../../assets/img/picture-12.jpg">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">Kendaraan berat</div>
+                                    <a href="#">
+                                        <h4>Kendaraan tambang dan semacamnya</h4>
+                                    </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="../../assets/img/picture-1.jpg">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">Lezat</div>
+                                    <a href="#">
+                                        <h4>Apa yang kami sediakan terjamin rasanya</h4>
+                                    </a>
+                                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                        magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="../../assets/img/picture-10.jpg">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">Bersertifikasi</div>
+                                    <a href="#">
+                                        <h4>Anda di tangan yagn handal</h4>
+                                    </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="../../assets/img/picture-2.jpg">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">Beramanah</div>
+                                    <a href="#">
+                                        <h4>Selalu berkontribusi kepada masyarakat</h4>
+                                    </a>
+                                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                        magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="card bg-base-100 shadow-md h-[130px]">
-        <div class="card-body pr-5 py-7 pl-0">
-          <div class="flex">
-            <div class="pr-4 pl-4 flex align-center">
-              <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
-            </div>
-            <div class="card-content">
-              <div class="avatar flex align-center justify-center">
-                <div class="w-5 rounded-full">
-                  <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
-                </div>
-                <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
-              </div>
-              <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
-              <div class="alt-info-container"
-                <span class="text-xs">Okt 1</span>
-                <span class="ml-3 badge p-2">Machine Learning</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="news" class="lg:px-48 px-8 py-8 bg-base-200">
-    <h1 class="text-2xl text-bold mb-5">
-      <i class="fa-solid fa-globe mr-3"></i>
-      <span>Berita</span>
-    </h1>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="col-span-2">
-        <div class="card bg-base-100 shadow-md h-[130px]">
-          <div class="card-body pr-5 py-7 pl-0">
-            <div class="flex">
-              <div class="pr-4 pl-4 flex align-center">
-                <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
-              </div>
-              <div class="card-content">
-                <div class="avatar flex align-center justify-center">
-                  <div class="w-5 rounded-full">
-                    <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
-                  </div>
-                  <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
-                </div>
-                <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
-                <div class="alt-info-container"
-                  <span class="text-xs">Okt 1</span>
-                  <span class="ml-3 badge p-2">Machine Learning</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="card bg-base-100 shadow-md h-[130px]">
-          <div class="card-body pr-5 py-7 pl-0">
-            <div class="flex">
-              <div class="pr-4 pl-4 flex align-center">
-                <h2 class="text-3xl text-base-300 font-bold"><span>01</span></h2>
-              </div>
-              <div class="card-content">
-                <div class="avatar flex align-center justify-center">
-                  <div class="w-5 rounded-full">
-                    <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
-                  </div>
-                  <p class="text-sm ml-2"><span>Bayu Setiawan</span></p>
-                </div>
-                <h3 class="card-title mt-2 text-base">Image Generation Announcement!</h3>
-                <div class="alt-info-container"
-                  <span class="text-xs">Okt 1</span>
-                  <span class="ml-3 badge p-2">Machine Learning</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<?php  require_once('../../layouts/web/footer.php') ?>
+    </section>
+    
+    <?php  require_once('../../layouts/web/footer.php') ?>
