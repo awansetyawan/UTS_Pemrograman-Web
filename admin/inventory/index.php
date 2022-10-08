@@ -5,7 +5,7 @@
     <div class="py-4">
         <div class="d-flex justify-content-between w-100 flex-wrap">
             <div class="mb-3 mb-lg-0">
-                <h1 class="h4">Histori Pengiriman</h1>
+                <h1 class="h4">Inventaris</h1>
             </div>
         </div>
     </div>
@@ -16,28 +16,20 @@
                 <tr>
                     <th></th>
                     <th>Nama</th>
-                    <th>Lokasi</th>
-                    <th>Total Kontrak</th>
+                    <th>Tambah</th>
+                    <th>Kurang</th>
+                    <th>Total</th>
+                    <th>Terakhir Terubah</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                     <th>1</th>
-                    <td>Mitra 1</td>
-                    <td>Jl. Lorem ipsum dolor sit.</td>
+                    <td>Gitar 1</td>
                     <td>1</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Mitra 2</td>
-                    <td>Jl. Lorem ipsum dolor sit.</td>
+                    <td>-</td>
                     <td>1</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Mitra 3</td>
-                    <td>Jl. Lorem ipsum dolor sit.</td>
-                    <td>1</td>
+                    <td>2021-10-10</td>
                 </tr>
               </tbody>
             </table>

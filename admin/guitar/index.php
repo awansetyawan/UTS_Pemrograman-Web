@@ -5,7 +5,7 @@
     <div class="py-4">
         <div class="d-flex justify-content-between w-100 flex-wrap">
             <div class="mb-3 mb-lg-0">
-                <h1 class="h4">Pengguna</h1>
+                <h1 class="h4">Gitar</h1>
             </div>
         </div>
     </div>
@@ -15,15 +15,15 @@
               <thead>
                 <tr>
                     <th></th>
-                    <th>Username</th>
-                    <th>Email</th>
+                    <th>Nama</th>
+                    <th>Tipe</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                     <th>1</th>
-                    <td>user</td>
-                    <td>user@galeri-gitar.com</td>
+                    <td>Gitar 1</td>
+                    <td>Akustik</td>
                 </tr>
               </tbody>
             </table>

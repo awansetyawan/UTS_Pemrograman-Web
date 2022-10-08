@@ -1,9 +1,10 @@
 
 <ul class="nav flex-column pt-3 pt-md-0">
   <li class="nav-item">
-    <a href="<?= $_SESSION['role'] == 'admin' ? '../../admin/dashboard' : '../../user/dashboard' ?>" class="nav-link d-flex align-items-center">
-      <span class="sidebar-icon">
-        <img src="../../assets/img/logo.png" height="100">
+    <a href="<?= $_SESSION['role'] == 'admin' ? '../../admin/dashboard' : '../../user/dashboard' ?>" class="nav-link d-flex align-items-center justify-content-center">
+      <span class="sidebar-icon text-center">
+        <h3>Galeri</h3>
+        <h3>Gitar</h3>
       </span>
     </a>
   </li>
@@ -17,26 +18,34 @@
   </li>
   <?php if($_SESSION['role'] == 'admin'): ?>
     <li class="nav-item">
-    <a href="../../admin/delivery/create.php" class="nav-link d-flex justify-content-between">
+    <a href="../../admin/order/create.php" class="nav-link d-flex justify-content-between">
       <span>
         <span class="sidebar-icon"><i class="fa-solid fa-plus"></i></span>
-        <span class="sidebar-text">Tambah Pengiriman</span>
+        <span class="sidebar-text">Tambah Pembelian</span>
       </span>
     </a>
   </li>
   <li class="nav-item">
-    <a href="../../admin/delivery" class="nav-link d-flex justify-content-between">
+    <a href="../../admin/order" class="nav-link d-flex justify-content-between">
       <span>
-        <span class="sidebar-icon"><i class="fa-solid fa-truck"></i></span>
-        <span class="sidebar-text">Histori Pengiriman</span>
+        <span class="sidebar-icon"><i class="fa-solid fa-shopping-bag"></i></span>
+        <span class="sidebar-text">Pembelian</span>
       </span>
     </a>
   </li>
   <li class="nav-item">
-    <a href="../../admin/contract" class="nav-link d-flex justify-content-between">
+    <a href="../../admin/pre-order" class="nav-link d-flex justify-content-between">
       <span>
-        <span class="sidebar-icon"><i class="fa-solid fa-file-signature"></i></span>
-        <span class="sidebar-text">Kontrak</span>
+        <span class="sidebar-icon"><i class="fa-solid fa-bell"></i></span>
+        <span class="sidebar-text">Pre-Order</span>
+      </span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="../../admin/inventory" class="nav-link d-flex justify-content-between">
+      <span>
+        <span class="sidebar-icon"><i class="fa-solid fa-box"></i></span>
+        <span class="sidebar-text">Inventaris</span>
       </span>
     </a>
   </li>
@@ -55,8 +64,8 @@
       <ul class="flex-column nav">
         <li class="nav-item">
           <a class="nav-link"
-            href="../../admin/partner">
-            <span class="sidebar-text">Mitra</span>
+            href="../../admin/guitar">
+            <span class="sidebar-text">Gitar</span>
           </a>
         </li>
         <li class="nav-item ">
@@ -69,18 +78,18 @@
   </li>
   <?php else: ?>
   <li class="nav-item">
-    <a href="../../user/delivery" class="nav-link d-flex justify-content-between">
+    <a href="../../user/pre-order" class="nav-link d-flex justify-content-between">
       <span>
-        <span class="sidebar-icon"><i class="fa-solid fa-truck"></i></span>
-        <span class="sidebar-text">Histori Pengiriman</span>
+        <span class="sidebar-icon"><i class="fa-solid fa-bell"></i></span>
+        <span class="sidebar-text">Pre-Order</span>
       </span>
     </a>
   </li>
   <li class="nav-item">
-    <a href="../../user/contract" class="nav-link d-flex justify-content-between">
+    <a href="../../user/order" class="nav-link d-flex justify-content-between">
       <span>
-        <span class="sidebar-icon"><i class="fa-solid fa-file-signature"></i></span>
-        <span class="sidebar-text">Kontrak</span>
+        <span class="sidebar-icon"><i class="fa-solid fa-shopping-bag"></i></span>
+        <span class="sidebar-text">Pembelian</span>
       </span>
     </a>
   </li>

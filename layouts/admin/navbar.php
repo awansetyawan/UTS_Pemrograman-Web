@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light px-4 col-12 d-lg-none">
+<nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
   <a class="navbar-brand me-lg-5" href="../../assets/dashboard/index.html">
     <img class="navbar-brand-dark" src="../../assets/img/logo.png" alt="Volt logo" /> 
     <img class="navbar-brand-light" src="../../assets/img/logo.png" alt="Volt logo" />
@@ -9,7 +9,7 @@
     </button>
   </div>
 </nav>
-<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-300 text-dark collapse" data-simplebar>
+<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
       <div class="d-flex align-items-center">
@@ -29,7 +29,7 @@
           </a>
       </div>
     </div>
-    <?php require_once('sidebar.php') ?>
+      <?php require_once('sidebar.php') ?>
     </div>
 </nav>
 <main class="content">

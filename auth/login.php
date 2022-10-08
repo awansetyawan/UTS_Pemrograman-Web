@@ -11,12 +11,12 @@ if(isset($_SESSION['status'])) {
 }
 
 if(isset($_POST['username'])) {
-  if($_POST['username'] == 'admin' && $_POST['password'] == 'password') {
+  if($_POST['username'] == 'admin' && $_POST['password'] == 'sandi') {
     $_SESSION['username'] = "admin";
     $_SESSION['role'] = 'admin';
     $_SESSION['status'] = "login";
     header("Location:../admin/dashboard");
-  } else if($_POST['username'] == 'user' && $_POST['password'] == 'password') {
+  } else if($_POST['username'] == 'user' && $_POST['password'] == 'sandi') {
     $_SESSION['username'] = "user";
     $_SESSION['role'] = 'user';
     $_SESSION['status'] = "login";
@@ -31,7 +31,7 @@ if(isset($_POST['username'])) {
     <div class="col-12 d-flex align-items-center justify-content-center">
         <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
             <div class="text-center text-md-center mb-4 mt-md-0">
-                <img src="../assets/img/logo.png" style="height: 100px;" alt="">
+              <h2>Galeri Gitar</h2>
             </div>
             <form action="" class="mt-4" method="POST">
                 <!-- Form -->
