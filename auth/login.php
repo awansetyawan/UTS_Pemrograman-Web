@@ -11,8 +11,8 @@ if(isset($_SESSION['status'])) {
 }
 
 if(isset($_POST['username'])) {
-  if($_POST['username'] == 'admin' && $_POST['password'] == 'sandi') {
-    $_SESSION['username'] = "admin";
+  if($_POST['username'] == 'awan' && $_POST['password'] == 'awan') {
+    $_SESSION['username'] = "awan";
     $_SESSION['role'] = 'admin';
     $_SESSION['status'] = "login";
     header("Location:../admin/dashboard");
