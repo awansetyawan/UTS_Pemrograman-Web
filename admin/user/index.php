@@ -1,5 +1,8 @@
 <?php require_once('../../layouts/admin/header.php') ?>
 
+<?php 
+    $users = all("pengguna");
+?>
 
 <div id="main" class="min-vh-100 pt-4">
     <div class="py-4">
@@ -16,15 +19,19 @@
                 <tr>
                     <th></th>
                     <th>Username</th>
-                    <th>Email</th>
+                    <th>Hak Akses</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>user</td>
-                    <td>user@galeri-gitar.com</td>
-                </tr>
+                <?php $i = 1 ?>
+                <?php foreach($users as $user): ?>
+                    <tr>
+                        <th><?= $i ?></th>
+                        <td><?= $user['username'] ?></td>
+                        <td><?= $user['role'] == 1 ? 'admin' : 'pengguna' ?></td>
+                    </tr>
+                    <?php $i++ ?>
+                <?php endforeach; ?>
               </tbody>
             </table>
         </div>

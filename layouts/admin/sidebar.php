@@ -34,14 +34,6 @@
     </a>
   </li>
   <li class="nav-item">
-    <a href="../../admin/pre-order" class="nav-link d-flex justify-content-between">
-      <span>
-        <span class="sidebar-icon"><i class="fa-solid fa-bell"></i></span>
-        <span class="sidebar-text">Pre-Order</span>
-      </span>
-    </a>
-  </li>
-  <li class="nav-item">
     <a href="../../admin/inventory" class="nav-link d-flex justify-content-between">
       <span>
         <span class="sidebar-icon"><i class="fa-solid fa-box"></i></span>
@@ -77,14 +69,6 @@
     </div>
   </li>
   <?php else: ?>
-  <li class="nav-item">
-    <a href="../../user/pre-order" class="nav-link d-flex justify-content-between">
-      <span>
-        <span class="sidebar-icon"><i class="fa-solid fa-bell"></i></span>
-        <span class="sidebar-text">Pre-Order</span>
-      </span>
-    </a>
-  </li>
   <li class="nav-item">
     <a href="../../user/order" class="nav-link d-flex justify-content-between">
       <span>

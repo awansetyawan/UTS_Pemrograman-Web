@@ -1,5 +1,29 @@
 <?php require_once('../../layouts/admin/header.php') ?>
 
+<?php 
+    $users = query("SELECT * FROM pengguna WHERE role = 2");
+    $guitars = all("gitar");
+?>
+
+<?php
+  if(isset($_POST['submit'])) {
+    unset($_POST['submit']);
+
+    $latest_inventory = query("SELECT total FROM inventaris WHERE id_gitar={$_POST['id_gitar']} ORDER BY id DESC");
+    $total = $latest_inventory[0]['total'] - $_POST['jumlah'] < 0 ? 0 : $latest_inventory[0]['total'] - $_POST['jumlah'];
+    store("pembelian");
+
+    store("inventaris", [
+        "id_gitar" => $_POST['id_gitar'],
+        "stock_in" => 0,
+        "stock_out" => $_POST['jumlah'],
+        "total" => $total,
+        "tanggal" => $_POST['tanggal'],
+    ]);
+    flash("Berhasil menambah pembelian!", "success");
+    header("Location: ./index.php");
+  }
+?>
 
 <div id="main" class="min-vh-100 pt-4">
     <div class="py-4">
@@ -11,48 +35,49 @@
     </div>
     <div class="card border-0 shadow components-section">
         <div class="card-body">
-            <form action="">
+            <form action="" method="POST">
                 <div class="row">
-                    <div class="col-12 mb-3">
-                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"> <label class="form-check-label" for="flexSwitchCheckChecked">Pre-order</label></div>
-                    </div>
-                    <div class="col-md-8 col-12 mb-3">
-                        <label for="birthday">Nama Pembeli</label>
-                        <input class="form-control" id="birthday" type="text" required>   
-                    </div>
-                    <div class="col-md-4 col-12 mb-3 d-flex align-items-center pt-4">
-                        <div class="form-check pt-3">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
-                            <label class="form-check-label" for="defaultCheck10">Buatkan Akun</label>
-                        </div>
-                    </div>
-                    <div class="col-12 mb-3">
-                        <label for="birthday">Tanggal Pembelian</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
-                            <input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>                                               
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-12 mb-3">
-                        <label for="birthday">Gitar</label>
-                        <select class="form-select select2" id="country" aria-label="Default select example">
-                            <option value="1">Gitar 1 - Bass</option>
-                            <option value="2">Gitar 2 - Akustik</option>
-                            <option value="3">Gitar 3 - Elektrik</option>
+                <div class="col-md-12 col-12 mb-3">
+                        <label for="birthday">Pengguna</label>
+                        <select class="form-select select2" id="id_pengguna" name="id_pengguna" aria-label="Default select example">
+                            <?php foreach($users as $user): ?>
+                                <option value="<?= $user['id'] ?>"><?= $user['username'] ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="col-12 mb-3">
-                        <label for="birthday">Total Pembelian</label>
-                        <input class="form-control" id="birthday" type="number" required>   
+                        <label for="tanggal">Tanggal Pembelian</label>
+                        <input class="form-control" id="tanggal" type="date" required name="tanggal">
                     </div>
-                    <div class="col-12">
-                        <label for="birthday">Catatan</label>
-                        <textarea class="form-control editor" placeholder="Catatan"></textarea>
+                    <div class="col-md-12 col-12 mb-3">
+                        <label for="birthday">Gitar</label>
+                        <select class="form-select select2" id="id_gitar" name="id_gitar" aria-label="Default select example">
+                            <?php foreach($guitars as $guitar): ?>
+                                <?php 
+                                    $latest_guitar_invent = query("SELECT total FROM inventaris WHERE id_gitar={$guitar['id']} ORDER BY id DESC");
+                                    $guitar_total = empty($latest_guitar_invent) ? 0 : $latest_guitar_invent[0]['total'];
+                                ?>
+                                <?php if($guitar_total > 0): ?>
+                                    <option value="<?= $guitar['id'] ?>"><?= $guitar['nama'] ?> - <?= $guitar['tipe'] ?> (Rp. <?= number_format($guitar['harga']) ?>) (Stock: <?= $guitar_total ?>)</option>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="jumlah">Jumlah Gitar</label>
+                        <input class="form-control" id="jumlah" name="jumlah" type="number" required>   
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="total">Total Pembelian</label>
+                        <div class="input-group">
+                            <span class="input-group-text">Rp. </span>
+                            <input class="form-control" id="total" type="number" required name="total">                                               
+                        </div>
                     </div>
                 </div>
                 
                 <div class="d-flex align-items-center justify-content-end">
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="submit" class="btn btn-primary" name="submit">Simpan</button>
                 </div>
             </form>
         </div>

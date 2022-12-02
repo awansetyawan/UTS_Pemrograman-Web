@@ -4,7 +4,6 @@
             <li><a href="../../web/home">Beranda</a></li>
             <li><a href="../../web/about">Tentang</a></li>
             <li><a href="../../web/catalog">Katalog</a></li>
-            <li><a href="../../web/contact">Kontak</a></li>
             <li><a href="../../auth/login.php">Masuk</a></li>
         </ul>
     </div>
