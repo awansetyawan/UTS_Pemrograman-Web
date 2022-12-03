@@ -16,11 +16,13 @@ if(isset($_POST['username'])) {
   $user = query("SELECT * FROM pengguna WHERE username='{$_POST['username']}'");
   if(empty($user)) {
     header("Location:./login.php?denied=true");
+    return;
   }
   $user = $user[0];
   $isPasswordCorrect = password_verify($_POST['password'], $user['password']);
   if(!$isPasswordCorrect) {
     header("Location:./login.php?denied=true");
+    return;
   }
   $_SESSION['username'] = $user['username'];
   $_SESSION['id'] = $user['id'];
